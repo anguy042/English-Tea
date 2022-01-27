@@ -1,0 +1,5 @@
+CREATE TABLE Book (
+	Isbn serial PRIMARY KEY,
+	Name VARCHAR ( 17 ) UNIQUE NOT NULL,
+	created_on TIMESTAMP NOT NULL
+);
