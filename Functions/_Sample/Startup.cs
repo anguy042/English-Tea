@@ -20,8 +20,6 @@ namespace BookStore.Sample.Function
                 opt.ConnectionString = connectionString;
             });
 
-            //TEST
-
             builder.Services.AddHttpClient();
             builder.Services.AddTransient(s => new NpgsqlConnection(connectionString));
             builder.Services.AddTransient<IBookRepository, BookRepository>();
