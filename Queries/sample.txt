@@ -1,0 +1,4 @@
+-- SAMPLE QUERY
+SELECT w.id, u.username,  w.name, wb.book_id FROM public.wish_list w
+INNER JOIN wish_list_book wb ON w.id = wb.wishlist_id
+INNER JOIN "user" u ON u.id = w.user_id
