@@ -1,4 +1,4 @@
-name: .NET
+name: Build Book Store Api
 
 on:
   push:
@@ -23,5 +23,5 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
       working-directory: BookStore.Api
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+#     - name: Test
+#       run: dotnet test --no-build --verbosity normal
