@@ -19,8 +19,9 @@ jobs:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: src
+      working-directory: BookStore.Api
     - name: Build
       run: dotnet build --no-restore
+      working-directory: BookStore.Api
     - name: Test
       run: dotnet test --no-build --verbosity normal
