@@ -14,6 +14,6 @@ Simple api to work with our bookstore
 - Avraham Moshe
 - Annie Nguyen
 - Alexandr
-- Agent_Pete
+- Peterson Normil
 - Daniel Nunez
 - Thang
