@@ -19,7 +19,7 @@ jobs:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
-      working-directory: src/English-Tea/BookStore.Api
+      working-directory: BookStore.Api
     - name: Build
       run: dotnet build --no-restore
     - name: Test
