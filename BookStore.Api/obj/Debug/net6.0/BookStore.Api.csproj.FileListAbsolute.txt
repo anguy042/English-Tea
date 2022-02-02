@@ -6,11 +6,12 @@ C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\Boo
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\BookStore.Api.dll
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\ref\BookStore.Api.dll
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\BookStore.Api.pdb
+C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\Dapper.dll
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\Npgsql.dll
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\BookStore.Api.csproj.AssemblyReference.cache
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\BookStore.Api.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\BookStore.Api.AssemblyInfoInputs.cache
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\BookStore.Api.AssemblyInfo.cs
@@ -25,5 +26,3 @@ C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\Boo
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\ref\BookStore.Api.dll
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\BookStore.Api.pdb
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\BookStore.Api.genruntimeconfig.cache
-C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\Dapper.dll
-C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\bin\Debug\net6.0\Npgsql.dll

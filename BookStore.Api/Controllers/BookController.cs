@@ -20,7 +20,7 @@ namespace BookStore.Api.Controllers
             _bookRepository = bookRepository;
         }
 
-        [HttpGet(Name = "GetBook")]
+        [HttpGet(Name = "Get")]
         public async Task<GetBookResponse> Get(string isbn)
         {
             _logger.LogInformation($"Get book isbn: {isbn}");
@@ -31,7 +31,7 @@ namespace BookStore.Api.Controllers
             return response;
         }
 
-        [HttpPost(Name = "AddBook")]
+        [HttpPost(Name = "Add")]
         public async Task<AddBookResponse> Add([FromBody] Book book)
         {
             _logger.LogInformation($"Attempting to add book");
