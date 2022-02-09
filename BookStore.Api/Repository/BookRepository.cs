@@ -24,61 +24,49 @@ namespace BookStore.Api.Repository
             return true;
         }
 
-        public async Task<List<Book>?> GetBooks(string isbn, string genre, string sortBy, string orderBy, int offset, int limit)
+        public async Task<List<Book>?> GetBooks(string? isbn, string? genre, string? sortBy, string? orderBy, int offset, int limit)
         {
             //Get book from database
             StringBuilder queryBuilder = new StringBuilder("SELECT * FROM book b ");
-            StringBuilder filterBuilder = new StringBuilder();
-            
-            Dictionary<string, string> filter = new Dictionary<string, string>();
-            filter.Add("isbn", isbn);
-            filter.Add("genre", genre);
-            foreach (KeyValuePair<string, string> entry in filter)
+            var filters = new Dictionary<string, string>
             {
-                if(entry.Value != null)
-                {
-                    if(filterBuilder.Length == 0)
-                    {
-                        filterBuilder.Append("WHERE ");
-                    }
-                    else
-                    {
-                        filterBuilder.Append("AND ");
-                    }
-                    if(!String.IsNullOrEmpty(entry.Value))
-                    {
-                        filterBuilder.Append($"{entry.Key} = '{entry.Value}' ");
-                    }
-                }
+                { "isbn", isbn },
+                { "genre", genre }
+            };
+
+            StringBuilder filterBuilder = new StringBuilder();
+            if(isbn != null || genre != null)
+                filterBuilder.Append("WHERE ");
+
+            var firstWhereCondition = true;
+            foreach (var filter in filters.Where(e => e.Value != null))
+            {
+                if (firstWhereCondition == false)
+                    filterBuilder.Append("AND ");
+
+                filterBuilder.Append($"{filter.Key} = '{filter.Value}' ");
+                firstWhereCondition = false;
             }
 
-            
-
             StringBuilder sortByStringBuilder = new StringBuilder();
-            if (sortBy != null)
+            if (!string.IsNullOrEmpty(sortBy))
             {
                 sortByStringBuilder.Append($"ORDER BY {sortBy} ");
-                if (String.IsNullOrEmpty(orderBy))
-                {
+
+                if (string.IsNullOrEmpty(orderBy))
                     sortByStringBuilder.Append("ASC ");
-                } 
                 else
-                {
                     sortByStringBuilder.Append($"{orderBy} ");
-                }
             }
 
             StringBuilder offsetBuilder = new StringBuilder();
             if(offset != 0)
-            {
                 offsetBuilder.Append($"OFFSET {offset} ");
-            }
 
             queryBuilder.Append(filterBuilder).Append(sortByStringBuilder).Append(offsetBuilder);
+
             if (limit != 0)
-            {
                 queryBuilder.Append($"LIMIT {limit} ");
-            }
 
             var results = await _connection.QueryAsync<Book>(queryBuilder.ToString());
             return results.ToList();
