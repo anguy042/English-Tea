@@ -3,7 +3,6 @@ BEGIN;
 CREATE TABLE IF NOT EXISTS public.book
 (
     isbn VARCHAR(13) PRIMARY KEY NOT NULL,
-    author_id SERIAL,
     name VARCHAR(20) NOT NULL,
     description VARCHAR(256),
     price DOUBLE PRECISION,
@@ -81,13 +80,6 @@ CREATE TABLE IF NOT EXISTS public.wish_list_book
     book_id VARCHAR(13) NOT NULL,
     PRIMARY KEY (wishlist_id, book_id)
 );
-
--- ALTER TABLE IF EXISTS public.book
---     ADD FOREIGN KEY (author_id)
---     REFERENCES public.author (id) MATCH SIMPLE
---     ON UPDATE CASCADE
---     ON DELETE CASCADE
---     NOT VALID;
 
 
 -- ALTER TABLE IF EXISTS public.rating

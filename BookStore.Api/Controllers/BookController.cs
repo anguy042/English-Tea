@@ -1,5 +1,6 @@
 using BookStore.Api.Interface;
 using BookStore.Api.Models;
+using BookStore.Api.Request;
 using BookStore.Api.Response;
 using BookStore.Sample.Function.Response;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +21,8 @@ namespace BookStore.Api.Controllers
             _bookRepository = bookRepository;
         }
 
-        [HttpGet(Name = "GetBook")]
+        //Endpoint to get book from book table
+        [HttpGet(template: "GetBook")]
         public async Task<GetBookResponse> Get(string isbn)
         {
             _logger.LogInformation($"Get book isbn: {isbn}");
@@ -31,12 +33,13 @@ namespace BookStore.Api.Controllers
             return response;
         }
 
-        [HttpPost(Name = "AddBook")]
+        //Endpoint to add a new book to book table
+        [HttpPost(template: "AddNewBook")]
         public async Task<AddBookResponse> Add([FromBody] Book book)
         {
             _logger.LogInformation($"Attempting to add book");
 
-            var isSuccess = await _bookRepository.AddBook(book);
+            var isSuccess = await _bookRepository.AddNewBook(book);
 
             //Create the response
             var response = new AddBookResponse
@@ -45,6 +48,38 @@ namespace BookStore.Api.Controllers
             };
 
             return response;
+        }
+
+        //Endpoint to add a new author to author table
+        [HttpPost(template: "AddNewAuthor")]
+        public async Task<AddAuthorResponse> Add([FromBody] Author author)
+        {
+            _logger.LogInformation($"Attempting to add author");
+
+            var isSuccess = await _bookRepository.AddNewAuthor(author);
+
+            //Create the response
+            var response = new AddAuthorResponse
+            {
+                Message = isSuccess ? "Success" : "Failed" //this is just a fancy if statement
+            };
+
+            return response;
+        }
+
+        //Endpoint to add a new book to an author to book_author table
+        [HttpPost(template: "AddBookToAuthor")]
+        public async Task Add([FromBody] AddBookToAuthorRequest request)
+        {
+            await _bookRepository.AddBookToAuthor(request.Id, request.Isbn);
+        }
+
+        //Endpoint to get books written by a given author
+        [HttpGet(template: "GetBooksRelatedToAuthor")]
+        public async Task<IEnumerable<AuthorBook>> Get(int id)
+        {
+            var books = await _bookRepository.GetBooksRelatedToAuthor(id);
+            return books;
         }
     }
 }
