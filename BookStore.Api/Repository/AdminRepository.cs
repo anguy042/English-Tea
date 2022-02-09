@@ -5,11 +5,11 @@ using Npgsql;
 
 namespace BookStore.Api.Repository
 {
-    public class BookRepository : IBookRepository
+    public class AdminRepository : IAdminRepository
     {
         private readonly NpgsqlConnection _connection;
 
-        public BookRepository(NpgsqlConnection connection)
+        public AdminRepository(NpgsqlConnection connection)
         {
             _connection = connection;
         }
@@ -37,28 +37,28 @@ namespace BookStore.Api.Repository
         public async Task<bool> AddNewAuthor(Author author)
         {
             var results = await _connection.QueryAsync<Author>($"INSERT INTO Author " +
-                                                             $"VALUES({author.Id}, '{author.FirstName}', " +
-                                                             $"'{author.LastName}', '{author.Biography}', " +
-                                                             $"'{author.Publisher}')");
+                                                               $"VALUES(DEFAULT, '{author.FirstName}', " +
+                                                               $"'{author.LastName}', '{author.Biography}', " +
+                                                               $"'{author.Publisher}')");
 
             //For now return true (success)
             return true;
         }
 
-        public async Task AddBookToAuthor(int id, string isbn)
+        public async Task AddBookToAuthor(int author_id, string isbn)
         {
 
             var results = await _connection.QueryAsync($"INSERT INTO public.author_book (author_id, book_isbn) " +
                                                        $"SELECT a.id, b.isbn " +
                                                        $"FROM author a, book b " +
-                                                       $"WHERE a.id = {id} and b.isbn = '{isbn}'");
+                                                       $"WHERE a.id = {author_id} and b.isbn = '{isbn}'");
         }
 
         public async Task<IEnumerable<AuthorBook>> GetBooksRelatedToAuthor(int Id)
         {
             //Get book from database
             var results = await _connection.QueryAsync<AuthorBook>($"SELECT * FROM public.author_book " +
-                                                             $"WHERE author_id = {Id}");
+                                                                   $"WHERE author_id = {Id}");
             return results;
         }
     }

@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient(s => new NpgsqlConnection(connectionString));
 
 //Repositories
-builder.Services.AddScoped<IBookRepository, BookRepository>();
+builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 
 builder.Services.Configure<DatabaseConfig>(opt =>
 {

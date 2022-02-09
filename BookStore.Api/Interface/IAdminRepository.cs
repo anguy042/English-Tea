@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace BookStore.Api.Interface
 {
-    public interface IBookRepository
+    public interface IAdminRepository
     {
         Task<Book?> GetBook(string isbn);
         Task<bool> AddNewBook(Book book);

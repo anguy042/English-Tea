@@ -9,13 +9,13 @@ namespace BookStore.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class BookController : ControllerBase
+    public class AdminController : ControllerBase
     {
-        private readonly ILogger<BookController> _logger;
-        private readonly IBookRepository _bookRepository;
+        private readonly ILogger<AdminController> _logger;
+        private readonly IAdminRepository _bookRepository;
 
-        public BookController(ILogger<BookController> logger,
-            IBookRepository bookRepository)
+        public AdminController(ILogger<AdminController> logger,
+            IAdminRepository bookRepository)
         {
             _logger = logger;
             _bookRepository = bookRepository;
@@ -67,11 +67,11 @@ namespace BookStore.Api.Controllers
             return response;
         }
 
-        //Endpoint to add a new book to an author to book_author table
+        //Endpoint to add a new book to an author to book_author table.
         [HttpPost(template: "AddBookToAuthor")]
         public async Task Add([FromBody] AddBookToAuthorRequest request)
         {
-            await _bookRepository.AddBookToAuthor(request.Id, request.Isbn);
+            await _bookRepository.AddBookToAuthor(request.Author_id, request.Isbn);
         }
 
         //Endpoint to get books written by a given author
