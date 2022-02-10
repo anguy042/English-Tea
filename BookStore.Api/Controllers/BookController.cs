@@ -31,12 +31,12 @@ namespace BookStore.Api.Controllers
             return response;
         }
 
-        [HttpPost(Name = "AddBook")]
+        [HttpPost(Name = "AddBook")]//method called via url 
         public async Task<AddBookResponse> Add([FromBody] Book book)
         {
-            _logger.LogInformation($"Attempting to add book");
+            _logger.LogInformation($"Attempting to add book");//logging to console
 
-            var isSuccess = await _bookRepository.AddBook(book);
+            var isSuccess = await _bookRepository.AddBook(book);//actual insertion into database
 
             //Create the response
             var response = new AddBookResponse

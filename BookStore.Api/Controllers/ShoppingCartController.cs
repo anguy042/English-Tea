@@ -1,0 +1,30 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using BookStore.Api.Interface;
+using BookStore.Api.Models;
+
+namespace BookStore.Api.Controllers
+{
+
+    [ApiController]
+    [Route("[controller]")]
+    public class ShoppingCartController : ControllerBase
+    {
+        private readonly Repository.ICartRepository _cartRepository;
+
+        public ShoppingCartController(Repository.ICartRepository cartRepository)
+        {
+            _cartRepository = cartRepository;
+        }
+
+        [HttpGet(Name = "GetCart/")]
+
+        public async Task<Cart?> Get(string user_id)
+        {
+           var cart = await _cartRepository.Get(user_id);
+
+            return cart;
+        }
+
+
+    }
+}
