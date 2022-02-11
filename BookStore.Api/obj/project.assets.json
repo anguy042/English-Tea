@@ -314,11 +314,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Peter Laptop\\Source\\Repos\\English-Tea\\BookStore.Api\\BookStore.Api.csproj",
+      "projectUniqueName": "C:\\Users\\Peter Laptop\\Desktop\\English-Tea\\BookStore.Api\\BookStore.Api.csproj",
       "projectName": "BookStore.Api",
-      "projectPath": "C:\\Users\\Peter Laptop\\Source\\Repos\\English-Tea\\BookStore.Api\\BookStore.Api.csproj",
+      "projectPath": "C:\\Users\\Peter Laptop\\Desktop\\English-Tea\\BookStore.Api\\BookStore.Api.csproj",
       "packagesPath": "C:\\Users\\Peter Laptop\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Peter Laptop\\Source\\Repos\\English-Tea\\BookStore.Api\\obj\\",
+      "outputPath": "C:\\Users\\Peter Laptop\\Desktop\\English-Tea\\BookStore.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Peter Laptop\\AppData\\Roaming\\NuGet\\NuGet.Config",

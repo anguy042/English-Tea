@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BookStore.Api.Interface;
 using BookStore.Api.Models;
+using BookStore.Api.Request;
 
 namespace BookStore.Api.Controllers
 {
@@ -17,12 +18,19 @@ namespace BookStore.Api.Controllers
         }
 
         [HttpGet(Name = "GetCart/")]
-
         public async Task<Cart?> Get(string user_id)
         {
            var cart = await _cartRepository.Get(user_id);
 
             return cart;
+        }
+
+        [HttpPost(Name = "CreateCart/")]
+        public async Task<bool> Create([FromBody] CreateShoppingCartRequest request )
+        {
+           // var cart = await _cartRepository.Get(user_id);
+
+            return false;
         }
 
 

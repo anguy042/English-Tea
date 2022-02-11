@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tn+t2TTYq1IisiLjvtXhWm3vAotSm1m+41tfCt5Rat81u8CrGaLOASuONO4vERxjykIpmbjPdxCjODyAeeba7Q==",
+  "dgSpecHash": "O0NRu9uwMXsX6fGOAn9PX7shRuIVeXs7c7ra7DXvvOoizb69FOAd8XTKDRFcAYcCCQZijUbGqbuBPFNiHRo8cg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Peter Laptop\\Source\\Repos\\English-Tea\\BookStore.Api\\BookStore.Api.csproj",
+  "projectFilePath": "C:\\Users\\Peter Laptop\\Desktop\\English-Tea\\BookStore.Api\\BookStore.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Peter Laptop\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Peter Laptop\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

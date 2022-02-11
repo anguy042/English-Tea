@@ -14,8 +14,6 @@ namespace BookStore.Api.Repository
         {
             _connection = connection;
         }
-
-
         public async Task<Cart?> Get(string user_id)
         {
             var results = await _connection.QueryAsync<Cart>($"SELECT * FROM public.cart " +
