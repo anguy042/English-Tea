@@ -2,6 +2,8 @@
 
 Simple api to work with our bookstore
 
+[![Build Book Store Api](https://github.com/anguy042/English-Tea/actions/workflows/dotnet.yml/badge.svg)](https://github.com/anguy042/English-Tea/actions/workflows/dotnet.yml)
+
 # Setup
 
 
