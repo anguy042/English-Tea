@@ -185,7 +185,7 @@ namespace BookStore.Api.Controllers
             }
 
             //Make sure this book exist in the db
-            var book = await _bookRepository.GetBook(request.Isbn);
+            var book = await _bookRepository.GetBooks(request.Isbn, null, null, null, 0, 1);
             if (book is null)
             {
                 var message = $"Failed to add book. {request.Isbn} does not exist in the database";
