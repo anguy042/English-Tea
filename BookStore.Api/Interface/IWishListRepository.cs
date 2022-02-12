@@ -4,9 +4,13 @@ namespace BookStore.Api.Interface
 {
     public interface IWishListRepository
     {
-        Task<IEnumerable<WishList>> Get(string user_id);
+        Task<IEnumerable<WishList>> GetByUserId(int user_id);
+        Task<WishList> GetByWishListId(int user_id);
         Task<IEnumerable<WishListBook>> GetBooks(int wish_list_id);
-        Task Create(int user_id, string name);
+        Task<int> GetWishListCount(int userId);
+        Task<WishList> Create(int user_id, string name);
+        Task MoveToCart(int wishListId, int user_id, string isbn);
+        Task RomoveBookFromList(int wishListId, string isbn);
         Task AddBook(int wish_list_id, string book_id);
     }
 }

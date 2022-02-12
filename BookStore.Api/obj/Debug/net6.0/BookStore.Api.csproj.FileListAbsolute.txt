@@ -26,3 +26,4 @@ C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\Boo
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\ref\BookStore.Api.dll
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\BookStore.Api.pdb
 C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\BookStore.Api.genruntimeconfig.cache
+C:\Users\avimo\OneDrive\Desktop\FIU\BookStore\BookStore.Api\obj\Debug\net6.0\BookStore.Api.csproj.AssemblyReference.cache
