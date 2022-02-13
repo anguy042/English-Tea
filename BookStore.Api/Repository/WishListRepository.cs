@@ -53,7 +53,7 @@ namespace BookStore.Api.Repository
                                          $"VALUES(DEFAULT, {userId}, '{isbn}', 1)");
         }
 
-        public async Task RomoveBookFromList(int wishListId, string isbn)
+        public async Task RemoveBookFromList(int wishListId, string isbn)
         {
             await _connection.QueryAsync($"DELETE FROM public.wish_list_book " +
                              $"WHERE wishlist_id = '{wishListId}' AND book_id = '{isbn}'");
