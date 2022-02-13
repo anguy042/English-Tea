@@ -10,7 +10,7 @@ namespace BookStore.Api.Interface
         Task<int> GetWishListCount(int userId);
         Task<WishList> Create(int user_id, string name);
         Task MoveToCart(int wishListId, int user_id, string isbn);
-        Task RomoveBookFromList(int wishListId, string isbn);
+        Task RemoveBookFromList(int wishListId, string isbn);
         Task AddBook(int wish_list_id, string book_id);
     }
 }
