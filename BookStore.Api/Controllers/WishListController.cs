@@ -148,7 +148,7 @@ namespace BookStore.Api.Controllers
             }
 
             await _wishListRepository.MoveToCart(request.WishListId, request.UserId, request.Isbn);
-            await _wishListRepository.RomoveBookFromList(request.WishListId, request.Isbn);
+            await _wishListRepository.RemoveBookFromList(request.WishListId, request.Isbn);
 
             return Ok();
         }
