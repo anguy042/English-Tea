@@ -8,6 +8,8 @@ values ('9785321569852', 'Test_Name01', 'Test01_Description', 20.25, 'Test01_Gen
 		 CURRENT_DATE, 5, 'Test01_Seller'),
 	   ('9788962364875', 'Test_Name02', 'Test02_Description', 120.25, 'Test02_Genre', 'Test02_Publisher',
 		 CURRENT_DATE, 10, 'Test02_Seller');
+	   ('9785321569853', 1, 'Test_Name03', 'Test03_Description', 20.25, 'Test01_Genre', 'Test01_Publisher',
+	     CURRENT_DATE, 5, 'Test01_Seller');
 
 -- USER
 INSERT INTO public."user"
