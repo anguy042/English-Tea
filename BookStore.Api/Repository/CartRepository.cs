@@ -22,6 +22,14 @@ namespace BookStore.Api.Repository
             return results.FirstOrDefault();
         }
 
+        public async Task Create(int user_id, string Isbn,int quantity )
+        {
+            var results = await _connection.QueryAsync<Cart>($"INSERT INTO public.cart " +
+                                                             $"VALUES(DEFAULT, '{user_id}', '{Isbn}','{quantity}' )");
+            
+           
+        }
+
 
     }
 }

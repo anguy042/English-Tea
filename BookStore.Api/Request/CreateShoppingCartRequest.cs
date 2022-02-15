@@ -2,10 +2,10 @@
 {
     public class CreateShoppingCartRequest
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+        public int User_Id { get; set; }
+        public string Isbn { get; set; }
 
-
+        public int Quantity { get; set; }
 
     }
 }

@@ -28,8 +28,9 @@ namespace BookStore.Api.Controllers
         [HttpPost(Name = "CreateCart/")]
         public async Task<bool> Create([FromBody] CreateShoppingCartRequest request )
         {
-           // var cart = await _cartRepository.Get(user_id);
+            // var cart = await _cartRepository.Get(user_id);
 
+           await _cartRepository.Create(request.User_Id, request.Isbn, request.Quantity);
             return false;
         }
 

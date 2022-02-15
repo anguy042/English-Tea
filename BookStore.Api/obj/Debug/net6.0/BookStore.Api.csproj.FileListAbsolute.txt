@@ -70,7 +70,6 @@ C:\Users\Peter Laptop\Desktop\English-Tea\BookStore.Api\bin\Debug\net6.0\Npgsql.
 C:\Users\Peter Laptop\Desktop\English-Tea\BookStore.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Peter Laptop\Desktop\English-Tea\BookStore.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Peter Laptop\Desktop\English-Tea\BookStore.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Peter Laptop\Desktop\English-Tea\BookStore.Api\obj\Debug\net6.0\BookStore.Api.csproj.AssemblyReference.cache
 C:\Users\Peter Laptop\Desktop\English-Tea\BookStore.Api\obj\Debug\net6.0\BookStore.Api.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Peter Laptop\Desktop\English-Tea\BookStore.Api\obj\Debug\net6.0\BookStore.Api.AssemblyInfoInputs.cache
 C:\Users\Peter Laptop\Desktop\English-Tea\BookStore.Api\obj\Debug\net6.0\BookStore.Api.AssemblyInfo.cs
