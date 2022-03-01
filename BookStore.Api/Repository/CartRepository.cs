@@ -18,17 +18,18 @@ namespace BookStore.Api.Repository
         {
             var results = await _connection.QueryAsync<Cart>($"SELECT * FROM public.cart " +
                                                              $"WHERE user_id = '{user_id}'");
-            Console.WriteLine("This is C#");
+            /*Console.WriteLine("This is C#");*/
             return results.FirstOrDefault();
         }
 
         public async Task Create(int user_id, string Isbn,int quantity )
         {
             var results = await _connection.QueryAsync<Cart>($"INSERT INTO public.cart " +
-                                                             $"VALUES(DEFAULT, '{user_id}', '{Isbn}','{quantity}' )");
-            
-           
+                                                             $"VALUES(DEFAULT, '{user_id}', '{Isbn}','{quantity}' )");   
         }
+
+
+
 
 
     }
