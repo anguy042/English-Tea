@@ -18,9 +18,9 @@ namespace BookStore.Api.Controllers
         }
 
         [HttpGet(Name = "GetCart/")]
-        public async Task<Cart?> Get(string user_id)
+        public async Task<IEnumerable<Cart?>> Get(string user_id) //make this function return a list of cart, refer to bookrepo code 
         {
-           var cart = await _cartRepository.Get(user_id);
+           var cart = await _cartRepository.Get(user_id); 
 
             return cart;
         }

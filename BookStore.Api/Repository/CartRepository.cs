@@ -14,12 +14,12 @@ namespace BookStore.Api.Repository
         {
             _connection = connection;
         }
-        public async Task<Cart?> Get(string user_id)
+        public async Task<IEnumerable<Cart?>> Get(string user_id)
         {
             var results = await _connection.QueryAsync<Cart>($"SELECT * FROM public.cart " +
                                                              $"WHERE user_id = '{user_id}'");
-            /*Console.WriteLine("This is C#");*/
-            return results.FirstOrDefault();
+           
+            return results;
         }
 
         public async Task Create(int user_id, string Isbn,int quantity )

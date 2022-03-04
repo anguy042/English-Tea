@@ -20,7 +20,7 @@ namespace BookStore.Api.Repository
             var results = await _connection.QueryAsync<Book>($"INSERT INTO Book " +
                                                              $"VALUES('{book.Isbn}', '{book.Name}');");
 
-            //For now return true (success)
+           
             return true;
         }
 

@@ -3,10 +3,10 @@
     public class Cart
     {
 
-        public int? Cart_Id { get; set; }
+        public int? Id { get; set; }
         public int? User_Id { get; set; }
 
-        public double? Price { get; set; }
+        public string? Book_Isbn { get; set; }
         public int? Quantity { get; set; }
      
        
