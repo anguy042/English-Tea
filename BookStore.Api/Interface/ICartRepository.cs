@@ -7,5 +7,6 @@ namespace BookStore.Api.Repository
         Task<IEnumerable<Cart?>> Get(string user_id);
 
         Task Create(int user_id, string Isbn, int quantity);
+         Task Remove(string Isbn, int user_id);
     }
 }

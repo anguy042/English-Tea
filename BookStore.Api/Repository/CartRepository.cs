@@ -28,7 +28,12 @@ namespace BookStore.Api.Repository
                                                              $"VALUES(DEFAULT, '{user_id}', '{Isbn}','{quantity}' )");   
         }
 
-
+        public async Task Remove(string Isbn, int user_id)
+        {
+            var results = await _connection.QueryAsync<Cart>($"DELETE FROM public.cart " +
+                                                              $"WHERE book_isbn = '{Isbn}'" +
+                                                              $"AND user_id = '{user_id}'");
+        }
 
 
 
