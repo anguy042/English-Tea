@@ -24,5 +24,11 @@ namespace BookStore.Api.Repository
             var results = await _connection.QueryAsync($"INSERT INTO rating VALUES (Default, {user_id}, '{isbn}', {stars},'{comment}', CURRENT_TIMESTAMP)");
         }
 
+        public async Task GetByIsbn(string isbn)
+        {
+            var results = await _connection.QueryAsync($"SELECT stars, comment FROM public.rating " +
+                                                       $"WHERE isbn='{isbn}' " +
+                                                       $"ORDER BY stars DESC");
+        }
     }
 }

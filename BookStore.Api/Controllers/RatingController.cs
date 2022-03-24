@@ -19,7 +19,7 @@ namespace BookStore.Api.Controllers
         }
 
 
-        [HttpPost(Name = "CreateRating/")]
+        [HttpPost(template: "CreateRating/")]
         public async Task<IActionResult> Create(string isbn, int user_id, int stars, string comment)
         {
             await ratingRespository.Create(isbn, user_id, stars, comment);
@@ -27,6 +27,14 @@ namespace BookStore.Api.Controllers
             return Ok();
         }
         
+        [HttpGet(template: "RetrieveRating/")]
+        public async Task<IActionResult> GetByIsbn(string isbn)
+        {
+            await ratingRespository.GetByIsbn(isbn);
+
+            return Ok();
+
+        }
     }
 }
 
