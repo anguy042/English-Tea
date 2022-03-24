@@ -30,11 +30,21 @@ namespace BookStore.Api.Controllers
         [HttpGet(template: "RetrieveRating/")]
         public async Task<IActionResult> GetByIsbn(string isbn)
         {
-            await ratingRespository.GetByIsbn(isbn);
+            var rating = await ratingRespository.GetByIsbn(isbn);
 
-            return Ok();
+            return Ok(rating);
 
         }
+
+        [HttpGet(template: "RetrieveAverageRating/")]
+        public async Task<IActionResult> GetAverage(string isbn)
+        {
+           var average = await ratingRespository.GetAverage(isbn);
+
+            return Ok(new {average = average});
+
+        }
+
     }
 }
 

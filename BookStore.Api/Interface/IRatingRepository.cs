@@ -7,7 +7,9 @@ namespace BookStore.Api.Interface
         Task<bool> AddRating(Rating rating);
         Task Create(string isbn, int user_id, int stars, string comment);
 
-        Task GetByIsbn(string isbn);
+        Task<IEnumerable<RatingSummary>> GetByIsbn(string isbn);
+
+        Task<int> GetAverage(string isbn);
 
     }
 }
