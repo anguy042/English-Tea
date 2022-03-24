@@ -27,7 +27,7 @@ namespace BookStore.Api.Controllers
             return Ok();
         }
         
-        [HttpGet(template: "RetrieveRating/")]
+        [HttpGet(template: "RetrieveRatings/")]
         public async Task<IActionResult> GetByIsbn(string isbn)
         {
             var rating = await ratingRespository.GetByIsbn(isbn);
