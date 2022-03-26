@@ -4,9 +4,9 @@ values (DEFAULT, 'test_first_name', 'test_last_name', 'test...biography', 'test_
 
 -- BOOK
 INSERT INTO book 
-values ('9785321569852', 1, 'Test_Name01', 'Test01_Description', 20.25, 'Test01_Genre', 'Test01_Publisher',
+values ('9785321569852', 'Test_Name01', 'Test01_Description', 20.25, 'Test01_Genre', 'Test01_Publisher',
 		 CURRENT_DATE, 5, 'Test01_Seller'),
-	   ('9788962364875', 1, 'Test_Name02', 'Test02_Description', 120.25, 'Test02_Genre', 'Test02_Publisher',
+	   ('9788962364875', 'Test_Name02', 'Test02_Description', 120.25, 'Test02_Genre', 'Test02_Publisher',
 		 CURRENT_DATE, 10, 'Test02_Seller');
 	   ('9785321569853', 1, 'Test_Name03', 'Test03_Description', 20.25, 'Test01_Genre', 'Test01_Publisher',
 	     CURRENT_DATE, 5, 'Test01_Seller');
