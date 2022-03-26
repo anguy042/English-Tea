@@ -34,13 +34,13 @@ namespace BookStore.Api.Controllers
             return false;
         }
         
-        //request to remove a book from a shopping cart, return bool? 
+       
        
         [HttpPost(template: "RemoveBookFromCart/")]
-        [ProducesResponseType(200)] // how to check if it actually deleted book, or if it doesnt exist, also check if person has a shopping cart 
+        [ProducesResponseType(200)] 
         public async Task<bool> Remove(string isbn, int user_id)
         {
-            // var cart = await _cartRepository.Get(user_id);
+           
 
             await _cartRepository.Remove( isbn, user_id);
             return false;
