@@ -15,6 +15,7 @@ builder.Services.AddTransient(s => new NpgsqlConnection(connectionString));
 //Repositories
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IWishListRepository, WishListRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
 
 builder.Services.Configure<DatabaseConfig>(opt =>
 {
@@ -29,6 +30,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
