@@ -19,7 +19,7 @@ namespace BookStore.Api.Repository
             var results = await _connection.QueryAsync<Book>($"INSERT INTO Book " +
                                                              $"VALUES('{book.Isbn}', '{book.Name}'," +
                                                              $"'{book.Description}', '{book.Price}', '{book.Genre}'," +
-                                                             $"'{book.Publisher}', '{book.PublishedDate}', {book.CopiesSold}, " +
+                                                             $"'{book.Publisher}', '{book.Published_Date}', {book.Copies_Sold}, " +
                                                              $"'{book.Seller}')");
 
             //For now return true (success)
