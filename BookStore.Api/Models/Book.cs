@@ -8,8 +8,8 @@
         public double? Price { get; set; }
         public string? Genre { get; set; }
         public string? Publisher { get; set; }
-        public DateTime? PublishedDate { get; set; }
-        public int? CopiesSold { get; set; }
+        public DateTime? Published_Date { get; set; }
+        public int? Copies_Sold { get; set; }
         public string? Seller { get; set; }
     }
 }
