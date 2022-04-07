@@ -15,6 +15,11 @@ builder.Services.AddTransient(s => new NpgsqlConnection(connectionString));
 //Repositories
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<IRatingRepository, RatingRepository>();
+builder.Services.AddScoped<IAdminRepository, AdminRepository>();
+builder.Services.AddScoped<ICartRepository, CartRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IWishListRepository, WishListRepository>(); 
+
 
 builder.Services.Configure<DatabaseConfig>(opt =>
 {
